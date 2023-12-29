@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
 
-export const GET: APIRoute = (ctx) => {
+export const GET: APIRoute = () => {
   return new Response(
     JSON.stringify({
       message: "You're logged in!",

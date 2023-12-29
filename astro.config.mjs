@@ -1,4 +1,4 @@
-import node from '@astrojs/node';
+//import node from '@astrojs/node';
 import { defineConfig } from 'astro/config';
 import vercel from "@astrojs/vercel/serverless";
 
