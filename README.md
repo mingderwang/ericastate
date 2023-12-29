@@ -1,13 +1,13 @@
-# bun-test-astro-template
+# Ericastate
 
-
+Erica State is still under development. Please wait...💤
 
 
 ## Tests
 
 ```sh
-npm install
-npm test
+bun i
+bun test
 ```
 
 ## Dependencies
