@@ -2,7 +2,7 @@
   "name": "ericastate",
   "module": "index.ts",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": true,
   "scripts": {
     "dev": "astro dev --open",
@@ -34,6 +34,7 @@
     "astro": "^4.0.7",
     "astro-flowbite": "^0.1.0",
     "canvas-confetti": "^1.9.2",
+    "flowbite": "^2.2.1",
     "flowbite-typography": "^1.0.3",
     "jose": "^5.2.0",
     "nanoid": "^5.0.4",
