@@ -1,5 +1,4 @@
 ---
-import MyComponent from "../components/MyComponent";
 import Layout from "../layouts/Layout.astro";
 const locals = Astro.locals;
 const cookie = Astro.request.headers.get("cookie");
@@ -10,7 +9,6 @@ const cookie = Astro.request.headers.get("cookie");
   <button id="logout">Logout</button>
   <h1>{JSON.stringify(locals)}</h1>
   <h2>{JSON.stringify(cookie)}</h2>
-  <MyComponent client:visible />
 </Layout>
 
 <script>
@@ -33,19 +31,19 @@ const cookie = Astro.request.headers.get("cookie");
   }
   const logoutButton = document.getElementById("logout");
 
-if (logoutButton) {
-  logoutButton.addEventListener("click", () => {
-    fetch("/api/logout", { method: "POST" })
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Not OK!");
-        }
-        window.location.href = "/";
-      })
-      .catch((error) => {
-        console.warn("Fetch call failed");
-        console.error(error);
-      });
-  });
-}
+  if (logoutButton) {
+    logoutButton.addEventListener("click", () => {
+      fetch("/api/logout", { method: "POST" })
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error("Not OK!");
+          }
+          window.location.href = "/";
+        })
+        .catch((error) => {
+          console.warn("Fetch call failed");
+          console.error(error);
+        });
+    });
+  }
 </script>
