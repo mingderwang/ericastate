@@ -4,7 +4,6 @@ import type { APIRoute } from "astro";
 import { TOKEN } from "../../constant";
 
 const secret = new TextEncoder().encode(import.meta.env.JWT_SECRET_KEY);
-console.log(secret)
 
 export const POST: APIRoute = async (ctx) => {
   try {
